@@ -1,0 +1,152 @@
+:root {
+   /* Primary */
+    --softBblue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /*Neutral*/
+
+    --veryDarkBlueM: hsl(217, 54%, 11%); /*(main BG) */
+    --veryDarkBlueC: hsl(216, 50%, 16%); /*(card BG) */
+    --veryDarkBlueL : hsl(215, 32%, 27%); /*((line)) */
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0; padding: 0;
+    font-family: 'Outfit', sans-serif;
+    height: 100%;
+    font-size: 1.125rem;
+    background: var(--veryDarkBlueM);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: .4s ease;
+}
+
+.container {
+    background: var(--veryDarkBlueC);
+    padding: 1.5rem;
+    max-width: 24.2rem;
+    min-width: 24.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 0.9rem;
+}
+.nft_image {
+    height: auto;
+    width: auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.nft_image img {
+    width: 100%;
+    border-radius: 0.5rem;
+    opacity: 1;
+    z-index: 1;
+    
+}
+
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:21.1rem ;
+    opacity: 0;
+    background-color: var(--cyan);
+    z-index: 3;
+    position: absolute;
+    top: 0rem;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.nft_image:hover .overlay{
+    opacity: 0.7;
+}
+
+.title{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 0.06rem;
+    cursor: pointer;
+}
+.title:hover{
+    color: var(--cyan);
+}
+.desc {
+    font-weight: 300;
+    color: var(--softBblue);
+    margin-top: 0;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+}
+.eth, .time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.eth_p {
+    color: var(--cyan);
+    margin-left: 0.4rem;
+}
+.days{
+    color: var(--softBblue);
+    margin-left: 0.6rem;
+}
+
+.owner {
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+
+.avatar img {
+    width: 100%;
+}
+.ownerText {
+    color: var(--white);
+    margin-left: 0.8rem;
+    cursor: pointer;
+}
+.ownerText:hover {
+    color: var(--cyan);
+}
+.ownerText span, .ownerText span:hover {
+    color: var(--softBblue);
+}
+
+hr {
+    width: 100%;
+    border-color: var(--softBblue);
+}
+
+.attribution{
+    font-size: 0.4rem;
+    color: var(--softBblue);
+}
+.attribution a {
+    text-decoration: none;
+    font-size: 0.4rem;
+    color: var(--softBblue);
+}
